@@ -42,7 +42,7 @@ class User extends Database
                 email VARCHAR(100) NOT NULL,
                 password VARCHAR(255) NOT NULL,
                 role_id INT(11) UNSIGNED NOT NULL,
-                status ENUM('active', 'inactive', 'banned') DEFAULT 'inactive',
+                status ENUM('active', 'inactive', 'banned') NOT NULL DEFAULT 'inactive',
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
                 UNIQUE (username, email),
